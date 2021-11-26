@@ -1,0 +1,31 @@
+name: 'Azure CLI Wrapper Action'
+description: 'Purge containers from your the Azure Container Registry'
+author: 'Plabick'
+branding:
+  icon: 'check-circle'  
+  color: 'blue'
+inputs:
+  registry:
+    description: 'The name of the Azure Container Registry to purge. Case insensitive i.e exampleazureregistry'
+    required: true
+  username: 
+    description: 'Azure Service Principal Username'
+    required: true
+  tenant: 
+    description: 'Azure Service Principal Tenant'
+    required: true
+  password:
+    description: 'Azure Service Principal Tennant ID'
+    required: true
+  command:
+    description: "The command to run, starting with `az`"
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.username }}
+    - ${{ inputs.tenant }}
+    - ${{ inputs.password }}
+    - ${{ inputs.command }}
+
