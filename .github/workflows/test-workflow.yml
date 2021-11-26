@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-       - name: Start MyContainerGroup
+    - name: Start MyContainerGroup
       uses: Plabick/ACR-Container-Purge-Action@master
       with:
         registry: ${{ secrets.registry }}
