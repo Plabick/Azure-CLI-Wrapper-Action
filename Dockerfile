@@ -1,9 +1,6 @@
 FROM mcr.microsoft.com/azure-cli
 
-#RUN apk update
-#RUN apk add git
 RUN apk add bash
-#RUN apk add wget
 RUN apk add --no-cache \
     ca-certificates \
     less \
