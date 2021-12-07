@@ -11,7 +11,7 @@ jobs:
           ref: refs/remotes/origin/noPWSH
       
       - name: Run action
-        uses: ./action.yml
+        uses: ./
         with:
           skip-login: true
           command: "echo hello"
