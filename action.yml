@@ -7,13 +7,13 @@ branding:
 inputs:
   username: 
     description: 'Azure Service Principal Username'
-    required: false
+    required: true
   tenant: 
     description: 'Azure Service Principal Tenant'
-    required: false
+    required: true
   password:
     description: 'Azure Service Principal Tennant ID'
-    required: false
+    required: true
   command:
     description: "The command to run, starting with `az`"
     required: true
