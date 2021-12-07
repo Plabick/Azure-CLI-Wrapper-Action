@@ -14,10 +14,6 @@ inputs:
   password:
     description: 'Azure Service Principal Tennant ID'
     required: false
-  skip-login:
-    description: ''
-    required: false
-    default: false
   command:
     description: "The command to run, starting with `az`"
     required: true
@@ -29,5 +25,4 @@ runs:
     - ${{ inputs.tenant }}
     - ${{ inputs.password }}
     - ${{ inputs.command }}
-    - ${{ inputs.skip-login }}
 
