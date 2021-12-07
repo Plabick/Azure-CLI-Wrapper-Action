@@ -17,6 +17,10 @@ inputs:
   command:
     description: "The command to run, starting with `az`"
     required: true
+  skip-login:
+    description: "If true, skip logging in to the Azure CLI"
+    required: false
+    default: 'false'
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -25,4 +29,6 @@ runs:
     - ${{ inputs.tenant }}
     - ${{ inputs.password }}
     - ${{ inputs.command }}
+    - ${{ inputs.skip-login }}
+
 
