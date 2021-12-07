@@ -1,5 +1,6 @@
-name: Test Action
+name: TestAction
 on:
+  push:
   workflow_dispatch:
 
 jobs:
@@ -8,12 +9,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: refs/remotes/origin/noPWSH
+          ref: noPWSH
       
       - name: Run action
         uses: ./
         with:
-          skip-login: true
+          skip-login: 'true'
           command: "echo hello"
       
       
