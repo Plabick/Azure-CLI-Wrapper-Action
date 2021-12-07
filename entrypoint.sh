@@ -1,4 +1,8 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 set -e # Abort at first error
-echo "Running \"pwsh /purge.ps1 -username "$1" -tenant "$2" -password "$3" -command "$4""
-pwsh /action.ps1 -username "$1" -tenant "$2" -password "$3" -command "$4"
+
+echo "Running \"az login --service-principal -u "$1" -p "$3" --tenant "$2"\""
+#az login --service-principal -u "$1" -p "$3" --tenant "$2"
+echo "----------Logged In----------"
+
+eval "$4"

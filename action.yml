@@ -5,9 +5,6 @@ branding:
   icon: 'check-circle'  
   color: 'blue'
 inputs:
-  registry:
-    description: 'The name of the Azure Container Registry to purge. Case insensitive i.e exampleazureregistry'
-    required: true
   username: 
     description: 'Azure Service Principal Username'
     required: true
@@ -28,4 +25,3 @@ runs:
     - ${{ inputs.tenant }}
     - ${{ inputs.password }}
     - ${{ inputs.command }}
-
