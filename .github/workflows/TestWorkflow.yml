@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: refs/remotes/origin/noPWSH
+          ref: refs/noPWSH
       
       - name: Run action
         uses: ./
