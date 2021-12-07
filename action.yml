@@ -7,13 +7,17 @@ branding:
 inputs:
   username: 
     description: 'Azure Service Principal Username'
-    required: true
+    required: false
   tenant: 
     description: 'Azure Service Principal Tenant'
-    required: true
+    required: false
   password:
     description: 'Azure Service Principal Tennant ID'
-    required: true
+    required: false
+  skip-login:
+    description: ''
+    required: false
+    default: false
   command:
     description: "The command to run, starting with `az`"
     required: true
@@ -25,4 +29,5 @@ runs:
     - ${{ inputs.tenant }}
     - ${{ inputs.password }}
     - ${{ inputs.command }}
+    - ${{ inputs.skip-login }}
 

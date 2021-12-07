@@ -1,0 +1,18 @@
+name: Test Action
+on:
+  workflow_dispatch:
+
+jobs:
+  speedtest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: refs/remotes/origin/noPWSH
+      
+      - name: Run action
+        with:
+          skip-login: true
+          command: "echo hello"
+      
+      
