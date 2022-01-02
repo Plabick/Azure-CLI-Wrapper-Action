@@ -1,6 +1,6 @@
 # Azure CLI Wrapper Action
 
-An action to run Azure CLI commands from a GitHub Workflow. This action creates a Docker container with PowerShell and the Azure CLI installed, logs in, and then attempts to run the command specified in the `command` input.
+An action to run Azure CLI commands from a GitHub Workflow. This action launches a Docker container with the Azure CLI installed, logs in, and then attempts to run the command specified in the `command` input.
 
 ## Usage
 
